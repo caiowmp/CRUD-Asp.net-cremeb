@@ -1,5 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Editar Usuário";
 }
+
+<div class="text-center">
+
+    <h1 class="display-4">Editar Usuário</h1>
+</div>
+
+<form>
+
+  <div class="form-group">
+    <label for="nome">Nome</label>
+    <input type="text" class="form-control" placeholder="Digite o nome do usuário">
+  </div>
+
+  <div class="form-group">
+    <label for="cpf">CPF</label>
+    <input type="text" class="form-control" placeholder="Digite o CPF do usuário">
+  </div>
+
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input type="number" class="form-control" placeholder="Digite o telefone do usuário">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" placeholder="Digite o email do usuário">
+  </div>
+
+  <div class="form-group">
+    <label for="cep">CEP</label>
+    <input type="number" class="form-control" placeholder="Digite o CEP do usuário">
+  </div>
+
+  <div class="form-group">
+    <label for="endereço">Endereço</label>
+    <input type="text" class="form-control" placeholder="Digite o endereço do usuário">
+  </div>
+
+  <div class="form-group">
+    <label for="documento_rg_pdf">Documento RG</label>
+    <input type="file" class="form-control" placeholder="Envie o documento RG do usuário em pdf">
+  </div>
+
+  <div class="form-group">
+    <label for="grupo_usuario">Grupo do usuário</label>
+    <input type="number" class="form-control" placeholder="Digite o grupo do usuário">
+  </div>
+
+  
+
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-label" id="ativo">
+    <label for="ativo">O usuários está ativo?</label>
+  </div>
+
+  <br />
+
+  <div class="d-grid gap-2">
+    <button type="submit" class="btn btn-primary btn-block">Alterar</button>
+    <a class="btn btn-secondary btn-block" asp-controller="Contato" asp-action="Index" role="button">Voltar</a>
+  </div>
+</form>
