@@ -10,5 +10,6 @@ namespace WebCrudCremeb.Data
         }
 
         public DbSet<UsuarioModel> Usuarios { get; set; }
+        public DbSet<GrupoModel> Grupos { get; set; }   
     }
 }

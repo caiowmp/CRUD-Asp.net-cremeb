@@ -1,0 +1,55 @@
+﻿@model List<GrupoModel>
+@{
+    ViewData["Title"] = "Listagem de Grupos";
+}
+
+<div class="text-center">
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button" asp-controller="Grupo" asp-action="Criar">Criar novo grupo</a>
+    </div>
+
+    <br />
+
+    @if(TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <button type ="button" class="btn btn-danger  btn-sm close-alert" arial-label="Close">X</button>
+            @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if(TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type ="button" class="btn btn-danger  btn-sm close-alert" arial-label="Close">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+
+    <br />
+
+    <h1 class="display-4">Listagem de Grupos</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+            @if(Model != null && Model.Any())
+            {
+                foreach(GrupoModel grupo in Model)
+                {
+                    <tr>
+                      <th scope="row">@grupo.Id</th>
+                      <td>@grupo.Descricao</td>
+                    </tr>
+                }
+            } 
+        </tbody>
+    </table>
+</div>
+

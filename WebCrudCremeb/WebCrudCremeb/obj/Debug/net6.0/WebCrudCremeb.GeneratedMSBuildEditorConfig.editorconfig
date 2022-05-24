@@ -15,6 +15,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\55719\Documents\Faculdade\Seletiva CREMEB\WebCrudCremeb\WebCrudCremeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/55719/Documents/Faculdade/Seletiva CREMEB/WebCrudCremeb/WebCrudCremeb/Views/Grupo/Criar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3J1cG9cQ3JpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/55719/Documents/Faculdade/Seletiva CREMEB/WebCrudCremeb/WebCrudCremeb/Views/Grupo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3J1cG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/55719/Documents/Faculdade/Seletiva CREMEB/WebCrudCremeb/WebCrudCremeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
