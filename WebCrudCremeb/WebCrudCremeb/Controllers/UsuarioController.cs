@@ -55,8 +55,13 @@ namespace WebCrudCremeb.Controllers
         [HttpPost]
         public IActionResult Alterar(UsuarioModel usuario)
         {
-            _usuarioRepositorio.Atualizar(usuario);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _usuarioRepositorio.Atualizar(usuario);
+                return RedirectToAction("Index");
+            }
+
+            return View("Editar",usuario);
         }
     }
 }
