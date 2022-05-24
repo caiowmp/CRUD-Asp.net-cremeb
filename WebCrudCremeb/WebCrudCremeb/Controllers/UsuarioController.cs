@@ -23,9 +23,10 @@ namespace WebCrudCremeb.Controllers
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
+            return View(usuario);
         }
         public IActionResult ApagarConfirmacao()
         {
@@ -39,5 +40,11 @@ namespace WebCrudCremeb.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
+        public IActionResult Alterar(UsuarioModel usuario)
+        {
+            _usuarioRepositorio.Atualizar(usuario);
+            return RedirectToAction("Index");
+        }
     }
 }
