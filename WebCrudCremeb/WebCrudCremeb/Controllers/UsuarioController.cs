@@ -13,7 +13,9 @@ namespace WebCrudCremeb.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            List<UsuarioModel> usuarios = _usuarioRepositorio.BuscarTodos();
+                
+            return View(usuarios);
         }
 
         public IActionResult Criar()

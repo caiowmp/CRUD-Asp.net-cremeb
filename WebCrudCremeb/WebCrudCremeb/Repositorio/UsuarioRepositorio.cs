@@ -10,6 +10,12 @@ namespace WebCrudCremeb.Repositorio
         {
             _bancoContext = bancoContext;
         }
+
+        public List<UsuarioModel> BuscarTodos()
+        {
+            return _bancoContext.Usuarios.ToList();
+        }
+
         public UsuarioModel Adicionar(UsuarioModel usuario)
         {
             //INSERÇÃO DO BANCO DE DADOS
