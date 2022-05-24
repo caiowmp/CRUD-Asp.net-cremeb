@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebCrudCremeb.Data;
+using WebCrudCremeb.Repositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkSqlServer()
     .AddDbContext<BancoContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("DataBase")));
+builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 
 var app = builder.Build();
 

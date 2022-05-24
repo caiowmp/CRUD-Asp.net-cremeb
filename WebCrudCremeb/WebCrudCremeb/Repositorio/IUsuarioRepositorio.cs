@@ -1,4 +1,6 @@
-﻿namespace WebCrudCremeb.Repositorio
+﻿using WebCrudCremeb.Models;
+
+namespace WebCrudCremeb.Repositorio
 {
     public interface IUsuarioRepositorio
     {
