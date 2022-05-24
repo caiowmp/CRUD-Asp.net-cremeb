@@ -13,42 +13,50 @@
   <div class="form-group">
     <label for="nome">Nome</label>
     <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do usuário">
+    @Html.ValidationMessageFor(x => x.Nome)
   </div>
 
   <div class="form-group">
     <label for="cpf">CPF</label>
     <input type="text" asp-for="Cpf" class="form-control" placeholder="Digite o CPF do usuário">
+    @Html.ValidationMessageFor(x => x.Cpf)
   </div>
 
   <div class="form-group">
     <label for="telefone">Telefone</label>
     <input type="number" asp-for="Telefone" class="form-control" placeholder="Digite o telefone do usuário">
-  </div>
+    @Html.ValidationMessageFor(x => x.Telefone)  
+</div>
 
   <div class="form-group">
     <label for="email">Email</label>
     <input type="email" asp-for="Email" class="form-control" placeholder="Digite o email do usuário">
+    @Html.ValidationMessageFor(x => x.Email)
   </div>
 
   <div class="form-group">
     <label for="cep">CEP</label>
     <input type="number" asp-for="Cep" class="form-control" placeholder="Digite o CEP do usuário">
+    @Html.ValidationMessageFor(x => x.Cep)
   </div>
 
   <div class="form-group">
     <label for="endereço">Endereço</label>
     <input type="text" asp-for="Endereco" class="form-control" placeholder="Digite o endereço do usuário">
+    @Html.ValidationMessageFor(x => x.Endereco)
   </div>
 
   <div class="form-group">
     <label for="documento_rg_pdf">Documento RG</label>
     <input type="file" asp-for="Documento_rg_pdf" class="form-control" placeholder="Envie o documento RG do usuário em pdf">
-  </div>
+    @Html.ValidationMessageFor(x => x.Documento_rg_pdf)  
+</div>
 
   <div class="form-group">
     <label for="grupo_usuario">Grupo do usuário</label>
     <input type="number" asp-for="Grupo_usuario_id" class="form-control" placeholder="Digite o grupo do usuário">
-  </div>
+    @Html.ValidationMessageFor(x => x.Grupo_usuario_id)  
+</div>
 
   
 

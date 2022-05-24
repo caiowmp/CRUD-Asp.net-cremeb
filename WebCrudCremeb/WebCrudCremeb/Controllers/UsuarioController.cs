@@ -43,8 +43,13 @@ namespace WebCrudCremeb.Controllers
         [HttpPost]
         public IActionResult Criar(UsuarioModel usuario)
         {
-            _usuarioRepositorio.Adicionar(usuario);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _usuarioRepositorio.Adicionar(usuario);
+                return RedirectToAction("Index");
+            }
+
+            return View(usuario);
         }
 
         [HttpPost]
