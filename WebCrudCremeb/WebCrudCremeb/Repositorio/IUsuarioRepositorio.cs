@@ -8,5 +8,6 @@ namespace WebCrudCremeb.Repositorio
         List<UsuarioModel> BuscarTodos();
         UsuarioModel Adicionar(UsuarioModel usuario);
         UsuarioModel Atualizar(UsuarioModel usuario);
+        bool Apagar(int id);
     }
 }

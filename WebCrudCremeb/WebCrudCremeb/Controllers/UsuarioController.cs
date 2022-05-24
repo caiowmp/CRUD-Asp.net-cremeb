@@ -28,9 +28,16 @@ namespace WebCrudCremeb.Controllers
             UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
             return View(usuario);
         }
-        public IActionResult ApagarConfirmacao()
+        public IActionResult ApagarConfirmacao(int id)
         {
-            return View();
+            UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
+            return View(usuario);
+        }
+
+        public IActionResult Apagar(int id)
+        {
+            _usuarioRepositorio.Apagar(id);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
