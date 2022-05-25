@@ -8,5 +8,7 @@ namespace WebCrudCremeb.Models
 
         [Required(ErrorMessage = "Digite a descrição do grupo")]
         public string Descricao { get; set; }
+
+        public ICollection<UsuarioModel> Integrantes { get; set; }
     }
 }

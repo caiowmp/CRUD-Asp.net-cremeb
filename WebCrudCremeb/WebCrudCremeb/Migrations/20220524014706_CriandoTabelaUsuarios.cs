@@ -28,12 +28,27 @@ namespace WebCrudCremeb.Migrations
                 {
                     table.PrimaryKey("PK_Usuarios", x => x.Id);
                 });
+
+            /*migrationBuilder.CreateTable(
+                name: "Grupos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Descircao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Grupos", x => x.Id);
+                });*/
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Usuarios");
+            /*migrationBuilder.DropTable(
+                name: "Grupos");*/
         }
     }
 }

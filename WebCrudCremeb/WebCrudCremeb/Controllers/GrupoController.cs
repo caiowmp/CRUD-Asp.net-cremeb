@@ -6,16 +6,16 @@ namespace WebCrudCremeb.Controllers
 {
     public class GrupoController : Controller
     {
-        private readonly IGrupoRepositorio _grupoRepositorio;
+        /*private readonly IGrupoRepositorio _grupoRepositorio;
         public GrupoController(IGrupoRepositorio grupoRepositorio)
         {
             _grupoRepositorio = grupoRepositorio;
-        }
+        }*/
         public IActionResult Index()
         {
             //List<GrupoModel> grupos = _grupoRepositorio.BuscarTodos();
 
-            return View(/*/grupos/*/);
+            return View();
         }
 
         public IActionResult Criar()
@@ -23,7 +23,7 @@ namespace WebCrudCremeb.Controllers
             return View();
         }
 
-        public IActionResult Editar(int id)
+        /*public IActionResult Editar(int id)
         {
             GrupoModel grupo = _grupoRepositorio.ListarPorId(id);
             return View(grupo);
@@ -76,6 +76,6 @@ namespace WebCrudCremeb.Controllers
                 TempData["MensagemErro"] = $"Erro ao cadastrar o usuário, tente novamente!\nErro: {erro.Message}";
                 return RedirectToAction("Index");
             }
-        }
+        }*/
     }
 }
